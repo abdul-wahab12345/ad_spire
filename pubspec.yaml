@@ -10,6 +10,7 @@ dependencies:
   get: 4.6.5
   flutter: 
     sdk: flutter
+  google_fonts: ^4.0.1
 
 dev_dependencies: 
   flutter_lints: 2.0.1
@@ -19,3 +20,15 @@ dev_dependencies:
 flutter: 
   uses-material-design: true
 
+fonts:
+    - family: GeneralSans
+      fonts:
+        - asset: assets/fonts/GeneralSans-Regular.otf
+        - asset: fonts/GeneralSans-Italic.otf
+          style: italic
+        - asset: fonts/GeneralSans-Medium.otf
+          weight: 500
+        - asset: fonts/GeneralSans-Bold.otf
+          weight: 700
+        - asset: fonts/GeneralSans-Semibold.otf
+          weight: 700

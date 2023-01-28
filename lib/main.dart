@@ -9,6 +9,9 @@ void main() {
     GetMaterialApp(
       title: "AdSpire",
       initialRoute: AppPages.INITIAL,
+      theme: ThemeData(
+        fontFamily: 'GeneralSans'
+      ),
       getPages: AppPages.routes,
     ),
   );

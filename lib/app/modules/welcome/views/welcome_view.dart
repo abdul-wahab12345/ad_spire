@@ -9,16 +9,13 @@ class WelcomeView extends GetView<WelcomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('WelcomeView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'WelcomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Text('Welcome')
+          ],
+        ) 
+    ),
     );
   }
 }
