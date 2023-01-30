@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/get_started/bindings/get_started_binding.dart';
+import '../modules/get_started/views/get_started_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.WELCOME,
       page: () => const WelcomeView(),
       binding: WelcomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.GET_STARTED,
+      page: () => const GetStartedView(),
+      binding: GetStartedBinding(),
     ),
   ];
 }

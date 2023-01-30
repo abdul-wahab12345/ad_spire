@@ -1,5 +1,6 @@
 import 'package:ad_spire/size_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SubmitButton extends StatelessWidget {
   final String title;
@@ -8,12 +9,16 @@ class SubmitButton extends StatelessWidget {
   final Color? textColor;
   final double? textSize;
   final Gradient? gradient;
+  final double? height;
+  final double? width;
 
   const SubmitButton({
     Key? key,
     required this.title,
     this.color,
     required this.onPressed,
+    this.height,
+    this.width,
     this.gradient,
     this.textSize,
     this.textColor,
@@ -24,12 +29,12 @@ class SubmitButton extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        height: getHeight(48),
-        width: double.infinity,
+        height: height ?? 48.h,
+        width: width ?? double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           gradient: gradient,
-          color: color,
+          color: color ?? Colors.white,
         ),
         alignment: Alignment.center,
         child: Text(
