@@ -1,3 +1,4 @@
+import 'package:ad_spire/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -46,8 +47,11 @@ class StoreView extends GetView<StoreController> {
                       isBest: true,
                     );
                   } else {
-                    return const StoreItem(
-                      isBest: false,
+                    return InkWell(
+                      onTap: () => Get.toNamed(Routes.SERVICE),
+                      child: const StoreItem(
+                        isBest: false,
+                      ),
                     );
                   }
                 },

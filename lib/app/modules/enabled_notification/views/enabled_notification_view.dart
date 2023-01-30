@@ -1,7 +1,7 @@
+import 'package:ad_spire/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 
 import 'package:ad_spire/constants.dart';
 import 'package:ad_spire/widgets/submit_button.dart';
@@ -65,7 +65,9 @@ class EnabledNotificationView extends GetView<EnabledNotificationController> {
                 ),
                 SubmitButton(
                   title: 'Continue',
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(Routes.STORE);
+                  },
                   color: Colors.white,
                 ),
                 SizedBox(
