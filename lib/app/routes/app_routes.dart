@@ -9,6 +9,8 @@ abstract class Routes {
   static const GET_STARTED = _Paths.GET_STARTED;
   static const ENABLED_NOTIFICATION = _Paths.ENABLED_NOTIFICATION;
   static const SETTINGS = _Paths.SETTINGS;
+  static const STORE = _Paths.STORE;
+  static const SERVICE = _Paths.SERVICE;
 }
 
 abstract class _Paths {
@@ -19,4 +21,6 @@ abstract class _Paths {
   static const GET_STARTED = '/get-started';
   static const ENABLED_NOTIFICATION = '/enabled-notification';
   static const SETTINGS = '/settings';
+  static const STORE = '/store';
+  static const SERVICE = '/service';
 }

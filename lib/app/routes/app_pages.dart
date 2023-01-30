@@ -1,25 +1,28 @@
 import 'package:get/get.dart';
 
-import '../modules/home/views/home_view.dart';
-import '../modules/login/views/login_view.dart';
-import '../modules/welcome/views/welcome_view.dart';
-import '../modules/settings/views/settings_view.dart';
-import '../modules/get_started/views/get_started_view.dart';
-import '../modules/enabled_notification/views/enabled_notification_view.dart';
-
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/login/bindings/login_binding.dart';
-import '../modules/welcome/bindings/welcome_binding.dart';
-import '../modules/settings/bindings/settings_binding.dart';
-import '../modules/get_started/bindings/get_started_binding.dart';
 import '../modules/enabled_notification/bindings/enabled_notification_binding.dart';
+import '../modules/enabled_notification/views/enabled_notification_view.dart';
+import '../modules/get_started/bindings/get_started_binding.dart';
+import '../modules/get_started/views/get_started_view.dart';
+import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/home_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
+import '../modules/service/bindings/service_binding.dart';
+import '../modules/service/views/service_view.dart';
+import '../modules/settings/bindings/settings_binding.dart';
+import '../modules/settings/views/settings_view.dart';
+import '../modules/store/bindings/store_binding.dart';
+import '../modules/store/views/store_view.dart';
+import '../modules/welcome/bindings/welcome_binding.dart';
+import '../modules/welcome/views/welcome_view.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SETTINGS;
+  static const INITIAL = Routes.STORE;
 
   static final routes = [
     GetPage(
@@ -51,6 +54,16 @@ class AppPages {
       name: _Paths.SETTINGS,
       page: () => const SettingsView(),
       binding: SettingsBinding(),
+    ),
+    GetPage(
+      name: _Paths.STORE,
+      page: () => const StoreView(),
+      binding: StoreBinding(),
+    ),
+    GetPage(
+      name: _Paths.SERVICE,
+      page: () => const ServiceView(),
+      binding: ServiceBinding(),
     ),
   ];
 }
