@@ -13,6 +13,7 @@ void main() {
         return GetMaterialApp(
           title: "AdSpire",
           initialRoute: AppPages.INITIAL,
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             fontFamily: 'GeneralSans'
           ),

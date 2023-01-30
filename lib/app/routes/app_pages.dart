@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/enabled_notification/bindings/enabled_notification_binding.dart';
+import '../modules/enabled_notification/views/enabled_notification_view.dart';
 import '../modules/get_started/bindings/get_started_binding.dart';
 import '../modules/get_started/views/get_started_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -14,7 +16,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.WELCOME;
+  static const INITIAL = Routes.ENABLED_NOTIFICATION;
 
   static final routes = [
     GetPage(
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.GET_STARTED,
       page: () => const GetStartedView(),
       binding: GetStartedBinding(),
+    ),
+    GetPage(
+      name: _Paths.ENABLED_NOTIFICATION,
+      page: () => const EnabledNotificationView(),
+      binding: EnabledNotificationBinding(),
     ),
   ];
 }
