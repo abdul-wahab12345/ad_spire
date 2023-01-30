@@ -1,12 +1,11 @@
-import 'package:ad_spire/app/routes/app_pages.dart';
-import 'package:ad_spire/constants.dart';
-import 'package:ad_spire/widgets/gradient_text.dart';
-import 'package:ad_spire/widgets/submit_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:get/get.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
+import 'package:ad_spire/constants.dart';
+import 'package:ad_spire/widgets/submit_button.dart';
+import 'package:ad_spire/widgets/gradient_text.dart';
 
 import '../controllers/enabled_notification_controller.dart';
 

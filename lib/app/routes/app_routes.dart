@@ -8,6 +8,7 @@ abstract class Routes {
   static const WELCOME = _Paths.WELCOME;
   static const GET_STARTED = _Paths.GET_STARTED;
   static const ENABLED_NOTIFICATION = _Paths.ENABLED_NOTIFICATION;
+  static const SETTINGS = _Paths.SETTINGS;
 }
 
 abstract class _Paths {
@@ -17,4 +18,5 @@ abstract class _Paths {
   static const WELCOME = '/welcome';
   static const GET_STARTED = '/get-started';
   static const ENABLED_NOTIFICATION = '/enabled-notification';
+  static const SETTINGS = '/settings';
 }

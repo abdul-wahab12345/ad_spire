@@ -1,14 +1,11 @@
-import 'package:ad_spire/app/modules/get_started/views/get_started_view.dart';
-import 'package:ad_spire/app/routes/app_pages.dart';
-import 'package:ad_spire/constants.dart';
-import 'package:ad_spire/widgets/gradient_text.dart';
-import 'package:ad_spire/widgets/submit_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:get/get.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'package:ad_spire/constants.dart';
+
+import 'package:ad_spire/app/routes/app_pages.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -27,57 +24,50 @@ class LoginView extends GetView<LoginController> {
               fit: BoxFit.cover,
             ),
             const FadeEndListView(),
-            Positioned(
-              bottom: -210.h,
-              right: 8,
-              left: 8,
-              child: Column(
-                children: [
-                  Button(
-                    title: 'Continue with Apple',
-                    icon: 'assets/svg/apple.svg',
-                    onPressed: () {},
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  Button(
-                    title: 'Login with Google',
-                    icon: 'assets/svg/google.svg',
-                    onPressed: () {},
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Text(
-                      'By continuing, you agree with our Privacy Policy & Terms of use.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w500,
-                          color: textColor.withOpacity(0.8)),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  TextButton(
-                    child: const Text(
-                      'Skip for now',
-                      style: TextStyle(
-                        color: textColor,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16,
-                      ),
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            )
           ]),
+          Button(
+            title: 'Continue with Apple',
+            icon: 'assets/svg/apple.svg',
+            onPressed: () {},
+          ),
+          SizedBox(
+            height: 16.h,
+          ),
+          Button(
+            title: 'Login with Google',
+            icon: 'assets/svg/google.svg',
+            onPressed: () {},
+          ),
+          SizedBox(
+            height: 16.h,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              'By continuing, you agree with our Privacy Policy & Terms of use.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w500,
+                color: textColor.withOpacity(0.8),
+              ),
+            ),
+          ),
+          Spacer(),
+          TextButton(
+            child: const Text(
+              'Skip for now',
+              style: TextStyle(
+                color: textColor,
+                fontWeight: FontWeight.w500,
+                fontSize: 16,
+              ),
+            ),
+            onPressed: () {
+              Get.toNamed(Routes.ENABLED_NOTIFICATION);
+            },
+          ),
+          Spacer(),
         ],
       ),
     );
@@ -126,6 +116,35 @@ class Button extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class FadeEndListView extends StatelessWidget {
+  const FadeEndListView({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      bottom: -1,
+      left: 0,
+      right: 0,
+      height: 100.h,
+      child: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0.1, 1.0],
+            colors: [
+              Color.fromRGBO(0, 0, 0, 0.0),
+              Color.fromRGBO(0, 0, 0, 1),
+            ],
+          ),
         ),
       ),
     );
