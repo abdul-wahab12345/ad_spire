@@ -30,7 +30,7 @@ class StoreView extends GetView<StoreController> {
               'Store',
               style: TextStyle(
                 fontFamily: 'Druk Wide',
-                fontSize: 24.sp,
+                fontSize: 20.sp,
                 fontWeight: FontWeight.w700,
               ),
               gradient: gradient,

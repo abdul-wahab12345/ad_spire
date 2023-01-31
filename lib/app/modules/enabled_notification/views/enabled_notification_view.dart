@@ -30,7 +30,7 @@ class EnabledNotificationView extends GetView<EnabledNotificationController> {
                   'ENABLE NOTIFICATIONS',
                   gradient: gradient,
                   style: TextStyle(
-                    fontSize: 24.sp,
+                    fontSize: 18.sp,
                     fontFamily: 'Druk Wide',
                     fontWeight: FontWeight.w700,
                   ),

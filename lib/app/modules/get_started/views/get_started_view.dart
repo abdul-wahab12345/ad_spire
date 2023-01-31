@@ -36,13 +36,13 @@ class GetStartedView extends GetView<GetStartedController> {
                     'THE WORLD\'S MOST POWERFUL AL HELPING MAKE THE BEST ADS FOR YOUR BUSINESS!',
                     gradient: gradient,
                     style: TextStyle(
-                        fontSize: 22.sp,
+                        fontSize: 18.sp,
                         fontFamily: 'Druk Wide',
                         fontWeight: FontWeight.w700),
                   ),
                   const Spacer(),
                   SubmitButton(
-                    title: 'let\'s Start',
+                    title: 'Let\'s Start',
                     onPressed: () {
                       Get.toNamed(Routes.LOGIN);
                     },
