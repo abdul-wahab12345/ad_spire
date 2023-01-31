@@ -41,14 +41,15 @@ class StoreView extends GetView<StoreController> {
             ),
             Expanded(
               child: Obx(
-                () => InkWell(
-                 onTap: () => Get.toNamed(Routes.SERVICE),
-                  child: ListView.builder(
-                    itemCount: controller.pkgs.length,
-                    itemBuilder: (context, index) {
-                     return StoreItem(pkg: controller.pkgs[index]);
-                    },
-                  ),
+                () => ListView.builder(
+                  itemCount: controller.pkgs.length,
+                  itemBuilder: (context, index) {
+                    final item = controller.pkgs[index];
+                    final priceCredit = controller.calculatePerValue(item);
+                    return InkWell(
+                        onTap: () => Get.toNamed(Routes.SERVICE),
+                        child: StoreItem(pkg: item, perValue: priceCredit));
+                  },
                 ),
               ),
             ),
@@ -61,7 +62,8 @@ class StoreView extends GetView<StoreController> {
 
 class StoreItem extends StatelessWidget {
   final CreditPackage pkg;
-  const StoreItem({required this.pkg, super.key});
+  final String perValue;
+  const StoreItem({required this.pkg, required this.perValue, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +75,8 @@ class StoreItem extends StatelessWidget {
         color: Colors.white,
         border: Border.all(
           width: pkg.isBest ? 3 : 0,
-          color: pkg.isBest ? const Color.fromRGBO(198, 60, 249, 1) : Colors.white,
+          color:
+              pkg.isBest ? const Color.fromRGBO(198, 60, 249, 1) : Colors.white,
         ),
         gradient: !pkg.isBest
             ? null
@@ -149,7 +152,7 @@ class StoreItem extends StatelessWidget {
                   height: 4.h,
                 ),
                 Text(
-                  '\$0.50/Credits',
+                  '\$$perValue/Credits',
                   style: TextStyle(
                     color: pkg.isBest ? textColor : darkTextColor,
                     fontSize: 16.sp,

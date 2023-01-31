@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 //---------colors---------------//
+
+final _random = math.Random();
+
+Color getRandomColor() => Color.fromRGBO(
+      //or with fromRGBO with fourth arg as _random.nextDouble(),
+      _random.nextInt(256),
+      _random.nextInt(256),
+      _random.nextInt(256),
+      1,
+    );
 
 const Color backgroundColor = Color.fromRGBO(30, 30, 30, 1);
 const Color textColor = Color.fromRGBO(232, 232, 219, 1);

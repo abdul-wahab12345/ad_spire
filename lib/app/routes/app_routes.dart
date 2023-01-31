@@ -11,6 +11,13 @@ abstract class Routes {
   static const SETTINGS = _Paths.SETTINGS;
   static const STORE = _Paths.STORE;
   static const SERVICE = _Paths.SERVICE;
+  static const V1 = _Paths.V1;
+  static const GENERATE_IDEA = _Paths.GENERATE_IDEA;
+  static const IMAGE_GENERATION_QUE = _Paths.IMAGE_GENERATION_QUE;
+  static const GENERATE_CAPTIONS = _Paths.GENERATE_CAPTIONS;
+  static const CAPTIONS = _Paths.CAPTIONS;
+  static const IMAGE_AD = _Paths.IMAGE_AD;
+  static const IMAGE_VARIATIONS = _Paths.IMAGE_VARIATIONS;
 }
 
 abstract class _Paths {
@@ -23,4 +30,11 @@ abstract class _Paths {
   static const SETTINGS = '/settings';
   static const STORE = '/store';
   static const SERVICE = '/service';
+  static const V1 = '/v1';
+  static const GENERATE_IDEA = '/generate-idea';
+  static const IMAGE_GENERATION_QUE = '/image-generation-que';
+  static const GENERATE_CAPTIONS = '/generate-captions';
+  static const CAPTIONS = '/captions';
+  static const IMAGE_AD = '/image-ad';
+  static const IMAGE_VARIATIONS = '/image-variations';
 }

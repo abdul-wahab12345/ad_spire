@@ -28,11 +28,11 @@ class ServiceView extends GetView<ServiceController> {
             SizedBox(
               height: 24.h,
             ),
-            GradientText(
+            const GradientText(
               'What is your product, service or business?',
               style: TextStyle(
                 fontFamily: 'Druk Wide',
-                fontSize: 20.sp,
+                fontSize: 20,
                 fontWeight: FontWeight.w700,
               ),
               gradient: gradient,
@@ -56,7 +56,7 @@ class ServiceView extends GetView<ServiceController> {
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.circular(12),
                 ),
-                fillColor: Color.fromRGBO(79, 79, 79, 1),
+                fillColor: const Color.fromRGBO(79, 79, 79, 1),
                 filled: true,
                 hintStyle: TextStyle(
                   color: textColor.withOpacity(0.5),
@@ -66,7 +66,7 @@ class ServiceView extends GetView<ServiceController> {
                 hintText: 'Be as specific or broad as you’d like...',
               ),
             ),
-            Spacer(),
+            const Spacer(),
             SubmitButton(
               title: 'Generate my own idea',
               color: Colors.transparent,
@@ -76,7 +76,7 @@ class ServiceView extends GetView<ServiceController> {
             SubmitButton(
               title: 'Next',
               onPressed: () {
-                Get.toNamed(Routes.SETTINGS);
+                Get.toNamed(Routes.V1);
               },
             ),
             SizedBox(

@@ -26,4 +26,9 @@ class StoreController extends GetxController {
   void onClose() {
     super.onClose();
   }
+
+  String calculatePerValue(CreditPackage pkg) {
+    return (double.parse(pkg.price) / double.parse(pkg.creditsCount))
+        .toStringAsFixed(2);
+  }
 }

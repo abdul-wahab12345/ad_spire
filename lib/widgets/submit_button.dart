@@ -7,6 +7,7 @@ class SubmitButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Color? color;
   final Color? textColor;
+  final Color? borderColor;
   final double? textSize;
   final Gradient? gradient;
   final double? height;
@@ -22,6 +23,7 @@ class SubmitButton extends StatelessWidget {
     this.gradient,
     this.textSize,
     this.textColor,
+    this.borderColor,
   }) : super(key: key);
 
   @override
@@ -33,6 +35,7 @@ class SubmitButton extends StatelessWidget {
         width: width ?? double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
+          border: borderColor != null ? Border.all(width: 1,color: borderColor!) : null,
           gradient: gradient,
           color: color ?? Colors.white,
         ),
