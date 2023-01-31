@@ -19,40 +19,41 @@ class GenerateCaptionsView extends GetView<GenerateCaptionsController> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 24.h,
-            ),
-            const GradientText(
-              'Here are some image ads I made using the idea: ',
-              style: TextStyle(
-                fontFamily: 'Druk Wide',
-                fontSize: 20,
-                fontWeight: FontWeight.w700,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 24.h,
               ),
-              gradient: gradient,
-            ),
-            SizedBox(
-              height: 8.h,
-            ),
-            Text(
-              'Lady holding a bag looking at her phone',
-              style: TextStyle(
-                color: textColor.withOpacity(0.8),
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
+              const GradientText(
+                'Here are some image ads I made using the idea: ',
+                style: TextStyle(
+                  fontFamily: 'Druk Wide',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                ),
+                gradient: gradient,
               ),
-            ),
-            SizedBox(
-              height: 24.h,
-            ),
-            Expanded(
-              flex: 6,
-              child: GridView.builder(
+              SizedBox(
+                height: 8.h,
+              ),
+              Text(
+                'Lady holding a bag looking at her phone',
+                style: TextStyle(
+                  color: textColor.withOpacity(0.8),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              SizedBox(
+                height: 24.h,
+              ),
+              GridView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 12.0,
@@ -72,32 +73,32 @@ class GenerateCaptionsView extends GetView<GenerateCaptionsController> {
                   );
                 },
               ),
-            ),
-            SizedBox(
-              height: 24.h,
-            ),
-            SubmitButton(
-              title: 'Generate Captions',
-              onPressed: () {
-                Get.toNamed(Routes.CAPTIONS);
-              },
-            ),
-            SizedBox(
-              height: 24.h,
-            ),
-            const Text(
-              'You may use these images as inspiration, a base/part of your ad, or even the final ad, 100% commercially!',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: textColor,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
+              SizedBox(
+                height: 24.h,
               ),
-            ),
-            SizedBox(
-              height: 30.h,
-            ),
-          ],
+              SubmitButton(
+                title: 'Generate Captions',
+                onPressed: () {
+                  Get.toNamed(Routes.CAPTIONS);
+                },
+              ),
+              SizedBox(
+                height: 24.h,
+              ),
+              const Text(
+                'You may use these images as inspiration, a base/part of your ad, or even the final ad, 100% commercially!',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: textColor,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              SizedBox(
+                height: 30.h,
+              ),
+            ],
+          ),
         ),
       ),
     );
