@@ -53,7 +53,7 @@ class LoginView extends GetView<LoginController> {
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           TextButton(
             child: const Text(
               'Skip for now',
@@ -67,7 +67,7 @@ class LoginView extends GetView<LoginController> {
               Get.toNamed(Routes.ENABLED_NOTIFICATION);
             },
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

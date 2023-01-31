@@ -63,8 +63,8 @@ class CaptionsView extends GetView<CaptionsController> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      Spacer(),
-                      Icon(
+                      const Spacer(),
+                      const Icon(
                         Icons.copy,
                         size: 15,
                         color: Color.fromRGBO(189, 189, 189, 1),

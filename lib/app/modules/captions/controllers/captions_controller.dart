@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class CaptionsController extends GetxController {
-  //TODO: Implement CaptionsController
+ 
 
   final count = 0.obs;
   @override

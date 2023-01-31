@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:ad_spire/constants.dart';
 import 'package:ad_spire/widgets/gradient_text.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/service_controller.dart';
 

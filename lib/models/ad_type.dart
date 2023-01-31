@@ -18,32 +18,32 @@ class AdTypes extends GetxController {
 
   void loadDemoPkgsFromSomeWhere() {
     var temps = [
-      AdType(
+      const AdType(
         id: '1',
         title: 'Simple',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '2',
         title: 'Abstract',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '3',
         title: 'Funny',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '4',
         title: 'Professional',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '5',
         title: 'Emotional',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '6',
         title: 'Outrageous',
         imageUrl: 'assets/img/rect.png',
@@ -54,42 +54,42 @@ class AdTypes extends GetxController {
 
   void loadDemoImgsFromSomeWhere() {
     var temps = [
-      AdType(
+      const AdType(
         id: '1',
         title: 'Digital Art',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '2',
         title: 'Pixel Art',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '3',
         title: 'Photorealistic',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '4',
         title: 'Realistic',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '5',
         title: 'Painted',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '6',
         title: 'Oil Painted',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '7',
         title: 'Drawn',
         imageUrl: 'assets/img/rect.png',
       ),
-      AdType(
+      const AdType(
         id: '8',
         title: '3D',
         imageUrl: 'assets/img/rect.png',

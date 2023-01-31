@@ -51,10 +51,10 @@ class ImageAdView extends GetView<ImageAdController> {
                           child: Column(
                             children: [
                               SvgPicture.asset('assets/svg/download.svg'),
-                              SizedBox(
+                              const SizedBox(
                                 height: 8,
                               ),
-                              Text(
+                              const Text(
                                 'Download',
                                 style: TextStyle(
                                   color: textColor,
@@ -69,10 +69,10 @@ class ImageAdView extends GetView<ImageAdController> {
                           child: Column(
                             children: [
                               SvgPicture.asset('assets/svg/share.svg'),
-                              SizedBox(
+                              const SizedBox(
                                 height: 8,
                               ),
-                              Text(
+                              const Text(
                                 'Share',
                                 style: TextStyle(
                                   color: textColor,
@@ -87,10 +87,10 @@ class ImageAdView extends GetView<ImageAdController> {
                           child: Column(
                             children: [
                               SvgPicture.asset('assets/svg/add.svg'),
-                              SizedBox(
+                              const SizedBox(
                                 height: 8,
                               ),
-                              Text(
+                              const Text(
                                 'Start new ad',
                                 style: TextStyle(
                                   color: textColor,

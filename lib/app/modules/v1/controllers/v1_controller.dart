@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class V1Controller extends GetxController {
-  //TODO: Implement V1Controller
 
   final textController = TextEditingController();
   final typeController = Get.put(AdTypes());

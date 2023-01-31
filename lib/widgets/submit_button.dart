@@ -1,4 +1,3 @@
-import 'package:ad_spire/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -43,7 +42,7 @@ class SubmitButton extends StatelessWidget {
         child: Text(
           title,
           style: TextStyle(
-            color: textColor ?? Color.fromRGBO(11, 11, 11, 1),
+            color: textColor ?? const Color.fromRGBO(11, 11, 11, 1),
             fontWeight: FontWeight.w600,
             fontSize: textSize ?? 16,
           ),

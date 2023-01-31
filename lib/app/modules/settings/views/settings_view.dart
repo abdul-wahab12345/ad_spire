@@ -73,7 +73,7 @@ class SettingsView extends GetView<SettingsController> {
               SizedBox(
                 height: 16.h,
               ),
-              Divider(),
+              const Divider(),
               SizedBox(
                 height: 24.h,
               ),
@@ -106,7 +106,7 @@ class SettingsView extends GetView<SettingsController> {
               SizedBox(
                 height: 16.h,
               ),
-              Divider(),
+              const Divider(),
               SizedBox(
                 height: 24.h,
               ),
@@ -160,7 +160,6 @@ class MenuTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Orientation currentOrientation = MediaQuery.of(context).orientation;
 
     return InkWell(
       onTap: onTap,

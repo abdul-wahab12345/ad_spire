@@ -2,7 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class ServiceController extends GetxController {
-  //TODO: Implement ServiceController
 
   final textController = TextEditingController();
   @override

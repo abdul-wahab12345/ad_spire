@@ -41,7 +41,7 @@ class ImageVariationsView extends GetView<ImageVariationsController> {
               ),
               GridView.builder(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 12.0,
@@ -49,7 +49,6 @@ class ImageVariationsView extends GetView<ImageVariationsController> {
                 ),
                 itemCount: 6,
                 itemBuilder: (context, index) {
-                  final color = getRandomColor();
                   return InkWell(
                     onTap: () {
                       Get.toNamed(Routes.SETTINGS);

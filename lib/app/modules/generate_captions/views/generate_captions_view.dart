@@ -53,7 +53,7 @@ class GenerateCaptionsView extends GetView<GenerateCaptionsController> {
               ),
               GridView.builder(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 12.0,
@@ -61,7 +61,6 @@ class GenerateCaptionsView extends GetView<GenerateCaptionsController> {
                 ),
                 itemCount: 4,
                 itemBuilder: (context, index) {
-                  final color = getRandomColor();
                   return InkWell(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
