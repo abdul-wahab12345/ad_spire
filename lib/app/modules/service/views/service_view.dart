@@ -41,8 +41,14 @@ class ServiceView extends GetView<ServiceController> {
               height: 24.h,
             ),
             TextField(
+              controller: controller.textController,
               textAlign: TextAlign.justify,
               maxLines: 8,
+              style: TextStyle(
+                  color: textColor,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w500,
+                ),
               decoration: InputDecoration(
                 contentPadding:
                     const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
@@ -62,7 +68,7 @@ class ServiceView extends GetView<ServiceController> {
             ),
             Spacer(),
             SubmitButton(
-              title: 'Generte my own idea',
+              title: 'Generate my own idea',
               color: Colors.transparent,
               textColor: textColor,
               onPressed: () {},

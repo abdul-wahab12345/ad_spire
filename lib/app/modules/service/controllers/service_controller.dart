@@ -1,9 +1,10 @@
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class ServiceController extends GetxController {
   //TODO: Implement ServiceController
 
-  final count = 0.obs;
+  final textController = TextEditingController();
   @override
   void onInit() {
     super.onInit();
@@ -19,5 +20,4 @@ class ServiceController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
 }

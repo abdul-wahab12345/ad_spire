@@ -1,4 +1,5 @@
 import 'package:ad_spire/app/routes/app_pages.dart';
+import 'package:ad_spire/models/credit_package.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,22 +40,16 @@ class StoreView extends GetView<StoreController> {
               height: 24.h,
             ),
             Expanded(
-              child: ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  if (index == 4) {
-                    return const StoreItem(
-                      isBest: true,
-                    );
-                  } else {
-                    return InkWell(
-                      onTap: () => Get.toNamed(Routes.SERVICE),
-                      child: const StoreItem(
-                        isBest: false,
-                      ),
-                    );
-                  }
-                },
+              child: Obx(
+                () => InkWell(
+                 onTap: () => Get.toNamed(Routes.SERVICE),
+                  child: ListView.builder(
+                    itemCount: controller.pkgs.length,
+                    itemBuilder: (context, index) {
+                     return StoreItem(pkg: controller.pkgs[index]);
+                    },
+                  ),
+                ),
               ),
             ),
           ],
@@ -65,8 +60,8 @@ class StoreView extends GetView<StoreController> {
 }
 
 class StoreItem extends StatelessWidget {
-  final bool isBest;
-  const StoreItem({required this.isBest, super.key});
+  final CreditPackage pkg;
+  const StoreItem({required this.pkg, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -77,10 +72,10 @@ class StoreItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: Colors.white,
         border: Border.all(
-          width: isBest ? 3 : 0,
-          color: isBest ? const Color.fromRGBO(198, 60, 249, 1) : Colors.white,
+          width: pkg.isBest ? 3 : 0,
+          color: pkg.isBest ? const Color.fromRGBO(198, 60, 249, 1) : Colors.white,
         ),
-        gradient: !isBest
+        gradient: !pkg.isBest
             ? null
             : const LinearGradient(colors: [
                 Color.fromRGBO(198, 60, 249, .2),
@@ -95,7 +90,7 @@ class StoreItem extends StatelessWidget {
               Row(
                 children: [
                   GradientText(
-                    '10',
+                    pkg.creditsCount,
                     style: TextStyle(
                       fontSize: 32.sp,
                       fontWeight: FontWeight.w600,
@@ -105,7 +100,7 @@ class StoreItem extends StatelessWidget {
                   SizedBox(
                     width: 10.w,
                   ),
-                  if (isBest)
+                  if (pkg.isBest)
                     Container(
                       padding:
                           EdgeInsets.symmetric(vertical: 4.h, horizontal: 8.w),
@@ -130,7 +125,7 @@ class StoreItem extends StatelessWidget {
               Text(
                 'Ad Credits',
                 style: TextStyle(
-                  color: isBest ? textColor : darkTextColor,
+                  color: pkg.isBest ? textColor : darkTextColor,
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w500,
                 ),
@@ -143,9 +138,9 @@ class StoreItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  '\$4.99',
+                  pkg.price,
                   style: TextStyle(
-                    color: isBest ? textColor : darkTextColor,
+                    color: pkg.isBest ? textColor : darkTextColor,
                     fontSize: 20.sp,
                     fontWeight: FontWeight.w500,
                   ),
@@ -156,7 +151,7 @@ class StoreItem extends StatelessWidget {
                 Text(
                   '\$0.50/Credits',
                   style: TextStyle(
-                    color: isBest ? textColor : darkTextColor,
+                    color: pkg.isBest ? textColor : darkTextColor,
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w500,
                   ),
