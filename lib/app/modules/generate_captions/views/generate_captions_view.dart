@@ -77,9 +77,7 @@ class GenerateCaptionsView extends GetView<GenerateCaptionsController> {
               ),
               SubmitButton(
                 title: 'Generate Captions',
-                onPressed: () {
-                  Get.toNamed(Routes.CAPTIONS);
-                },
+                onPressed: controller.ongenerate
               ),
               SizedBox(
                 height: 24.h,
